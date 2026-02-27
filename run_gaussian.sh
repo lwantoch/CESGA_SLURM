@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# run_gaussian.sh — robust wrapper to run a single Gaussian16 job (.com input)
+# run_gaussian.sh — runs a single Gaussian16 job (.com input)
 #
 # What this script does (high level):
 #   1) Parses CLI options controlling overwrite/skip policy and optional overrides.
@@ -63,7 +63,7 @@ DISP=""     # upserts EmpiricalDispersion=...; use "none" to remove it
 # We parse flags until we hit a non-flag (which should be the input .com).
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    # -o: overwrite / force run
+    # -o: overwrite
     -o) OVERWRITE=1; shift ;;
 
     # --restart: attempt restart via .chk
@@ -98,7 +98,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-# -------- input resolution --------
+
 # First remaining argument must be the Gaussian input (.com)
 INPUT="${1:?ERROR: missing input .com file}"
 [[ -f "$INPUT" ]] || { echo "ERROR: input not found: $INPUT" >&2; exit 2; }

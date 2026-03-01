@@ -324,6 +324,9 @@ submit_single() {
 #SBATCH --error=${script_dir}/logs/%x_%j.err
 #SBATCH --requeue
 
+module purge
+module load cesga/2025 nvhpc/25.3-CUDA-system openmpi/4.1.8
+
 set -euo pipefail
 mkdir -p "${script_dir}/logs"
 

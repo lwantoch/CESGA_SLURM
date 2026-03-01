@@ -17,17 +17,18 @@ The goal is **reproducible large-scale QM workflows**, especially for batch calc
 
 Typical workflow:
 
-Gaussian input (.com)
-        ↓
-gaussian2orca.py
-        ↓
-ORCA input (.inp)
-        ↓
-submit_orca.sh
-        ↓
-run_orca.sh (SLURM worker)
-        ↓
-ORCA calculation
+Gaussian input (.com)  
+        ↓  
+gaussian2orca.py   
+        ↓  
+        
+ORCA input (.inp)  
+        ↓  
+submit_orca.sh  
+        ↓  
+run_orca.sh (SLURM worker)  
+        ↓  
+ORCA calculation  
 
 The scripts are designed for:
 

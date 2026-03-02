@@ -1,6 +1,6 @@
 # CESGA_SLURM
 
-Utilities for running **Gaussian** and **ORCA** quantum chemistry calculations on the **CESGA FinisTerrae III (SLURM)** cluster.
+Utilities for running **Gaussian** and **ORCA** quantum chemistry calculations on the **CESGA FinisTerrae** cluster.
 
 This repository provides:
 
